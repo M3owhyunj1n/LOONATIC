@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOONATIC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="titular">
+            <h1 class="titulo">LOONATIC</h1>
+        </div>    
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>Chuu</li>
+            <li>Yves</li>
+            <li>Artms</li>
+            <li>Loossemble</li>
+            <li>
+                <a href="DOM.html">Añadir noticia</a>
+            </li>
+        </ul>
+    </nav>
+     <section id="loona">
+        <div class="noticias-container">
+            <article class="noticia">
+                <h2>LOONA: Un legado que sigue brillando</h2>
+                <img src="Images/loonaot12.jpg" alt="loona ot12">
+                <p>LOONA (이달의 소녀) fue un innovador grupo de 12 integrantes conocido por su concepto único y su universo musical interconectado. Desde 2016, cada miembro fue presentada individualmente con su propia canción antes de unirse como grupo completo en 2018 con "[++]" y el tema "Hi High".
+                    Con subunidades como LOONA 1/3, ODD EYE CIRCLE y yyxy, lograron un sonido diverso y una estética inigualable. Canciones como "Butterfly", "So What" y "Flip That" consolidaron su fama global.
+                    En 2023, problemas con su agencia llevaron a su disolución, pero las integrantes renacieron en nuevos proyectos: ARTMS, Loossemble y carreras en solitario. Aunque LOONA ya no existe como grupo, su legado sigue vivo en la música y en sus fans, los Orbits.
+                </p>
+            </article>
+            <article class="noticia">
+                <h2>ARTMS: Un Sonido Experimental que Trasciende Fronteras</h2>
+                <img src="Images/artms.jpg" alt="loona ot12">
+                <p>
+                    ARTMS, conformado por Heejin, Haseul, Kim Lip, Jinsoul y Choerry, ha emergido como un proyecto vanguardista que va más allá del K-pop. Su sonido experimental, que fusiona géneros como el electro, el pop alternativo y la música electrónica, está atrayendo a una audiencia global. Con influencias internacionales y un enfoque creativo único, ARTMS no solo busca redefinir la música de Loona, sino también trascender las fronteras de la industria, explorando nuevas perspectivas artísticas que resuenan con diferentes culturas y mercados musicales.
+                </p>
+            </article>
+           <article class="noticia">
+            <h2>Loossemble: Una Nueva Era Musical con Diversidad de Estilos</h2>
+                <img src="Images/loossemble.jpeg" alt="loona ot12">
+                <p>
+                    Loossemble, integrado por Hyunjin, Yeojin, Vivi, Gowon y Hyeju, ha debutado con un concepto fresco y audaz que combina géneros como el pop alternativo, trap y electrónica. Este subgrupo no solo se destaca por su estilo musical innovador, sino también por su enfoque artístico que abarca más allá de la música, buscando conectar con una audiencia diversa a través de sus visuales y propuestas culturales. Loossemble está listo para ofrecer algo distinto, sin limitarse al K-pop, y atraer a aquellos que buscan explorar sonidos alternativos y más globales.
+                </p>
+            </article>
+            <article class="noticia">
+                <h2>Chuu: Un Redebut con Autenticidad y Emoción</h2>
+                <img src="Images/chuu.jpg" alt="loona ot12">
+                <p>
+                    Chuu ha dado un giro interesante a su carrera con su redebut como solista, marcando su transición hacia géneros como el indie pop y el electropop. Su música refleja una mezcla de dulzura y madurez, mostrando su crecimiento personal y artístico. Este nuevo enfoque no solo la consolida como una artista multifacética dentro del K-pop, sino que también la coloca en la escena musical global, donde sus letras profundas y su voz única están conectando con un público más amplio, ansioso por ver cómo sigue evolucionando.
+                </p>
+            </article>
+            <article class="noticia">
+                <h2>Yves: La Voz de la Innovación y la Elegancia en Solitario</h2>
+                <img src="Images/yves.jpg" alt="loona ot12">
+                <p>
+                    Yves ha dejado en claro que su música solista no está limitada solo al ámbito del K-pop. Su sonido se desplaza por diferentes géneros, incluyendo elementos de indie pop, electrónica suave y hasta sonidos más experimentales. Al igual que Chuu, Yves busca trascender las fronteras del K-pop, consolidándose como una artista que se arriesga con su música, creando atmósferas que invitan a la reflexión y la introspección. Este redebut no solo marca el comienzo de su carrera en solitario, sino que también coloca a Yves en una nueva posición dentro de la música global.
+                </p>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <h3>
+            <p class="creditos">
+                Hecho por Oriana Vedia :D
+                Emili Zambrana
+                y Natalia Torrico
+                GRUPO 7   
+            </p>
+        </h3>
+    </footer>
+    <script>
+  const noticias = JSON.parse(localStorage.getItem('noticias')) || [];
+
+  const contenedor = document.querySelector('.noticias-container');
+
+    noticias.slice().reverse().forEach(noticia => {
+    const articulo = document.createElement('article');
+    articulo.classList.add('noticia');
+
+    articulo.innerHTML = `
+      <h2>${noticia.titular}</h2>
+      <img src="${noticia.imagen}" alt="Imagen noticia" />
+      <p>${noticia.texto}</p>
+      <small><strong>Fecha de publicación:</strong> ${noticia.fecha}</small>
+    `;
+
+    contenedor.appendChild(articulo);
+  });
+</script>
+
+</body>
+</html>
