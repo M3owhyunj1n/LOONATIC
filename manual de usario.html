@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manual de Usuario - LOONATIC</title>
+   <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <img src="Images/logo.png" alt="">
+        </div>
+        <div class="titular">
+            <h1 class="titulo">LOONATIC</h1>
+        </div>    
+    </header>
+    <header class="cover" id="caratula">
+      <img class="logo" src="Images/images-removebg-preview.png" alt="Logo del colegio">
+      <h1 class="titulo">MANUAL DE USUARIO</h1>
+      <li class="meta"><strong>Aplicación Web:</strong> LOONATIC — Portal de noticias</li>
+      <li class="meta">Autores: Oriana Vedia, Emili Zambrana y Natalia Torricos — Grupo 7</li>
+      <li class="meta">Sucre — Bolivia · 2025</li>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>Chuu</li>
+            <li>Yves</li>
+            <li>Artms</li>
+            <li>Loossemble</li>
+            <li>
+                <a href="index.html">Pagina principal</a>
+            </li>
+        </ul>
+    </nav>
+  <div class="wrap">
+
+    <nav class="toc" aria-label="Índice">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#intro">1. Introducción</a></li>
+        <li><a href="#requisitos">2. Requisitos técnicos</a></li>
+        <li><a href="#uso">3. Uso de la aplicación (paso a paso)</a></li>
+      </ul>
+    </nav>
+
+    <section id="intro">
+      <h2>1. Introducción</h2>
+      <p>Este manual describe técnicamente la aplicación web <strong>LOONATIC</strong>, un portal de noticias centrado en LOONA y sus subunidades. La aplicación permite visualizar noticias, agregar nuevas noticias, editar y eliminar registros. El almacenamiento de las noticias se maneja mediante <code>localStorage</code> del navegador, por lo que no se requiere servidor o base de datos externa.</p>
+    </section>
+
+    <section id="requisitos">
+      <h2>2. Requisitos técnicos</h2>
+      <ul>
+        <li>Navegador moderno (Chrome, Firefox, Edge) actualizado.</li>
+        <li>Conexión a Internet para cargar Google Fonts y Bootstrap (opcional).</li>
+        <li>Archivos en la misma estructura de proyecto: <code>index.html</code>, <code>DOM.html</code>, <code>noticias.js</code>, <code>styles.css</code> y la carpeta <code>/images/</code>.</li>
+      </ul>
+    </section>
+
+    <section id="uso">
+      <h2>3. Uso de la aplicación (paso a paso)</h2>
+
+      <h2>3.1 Abrir la aplicación</h2>
+      <p>Accede a <strong>LOONATIC</strong> desde el servidor local o abriendo el archivo en el navegador. En la barra de navegación hay un enlace a <strong>Añadir noticia</strong> para añadir noticias.</p>
+
+      <h2>3.2 Añadir una noticia</h2>
+      <ol>
+        <li>Ir a <strong>Añadir noticia</strong>.</li>
+        <img src="./Images/imagen1.png" alt="" class="img">
+        <li>Completar los campos: <strong>Titular</strong>, <strong>Texto</strong> y <strong>Imagen</strong>.</li>
+        <img src="./Images/imagen2.png" alt="" class="img">
+        <li>Presionar <em>Guardar Noticia</em>. El sistema validará que título y texto no estén vacíos.</li>
+        <img src="./Images/imagen3.png" alt="" class="img">
+        <li>La imagen se convertirá a Base64 y la noticia se guardará en <code>localStorage</code>.</li>
+      </ol>
+
+      <h2>3.3 Editar una noticia</h2>
+      <ol>
+        <li>En cualquiera de las páginas donde aparecen noticias, presionar el botón <em>Editar</em> de la noticia deseada.</li>
+        <img src="./Images/imagen4.png" alt="" class="img">
+        <li>El formulario en <strong>Añadir noticia</strong> se llenará con los datos actuales.</li>
+        <li>Modificar lo necesario y guardar: la entrada existente se actualizará en <code>localStorage</code>.</li>
+        <img src="./Images/imagen5.png" alt="" class="img">
+      </ol>
+
+      <h2>3.4 Eliminar una noticia</h2>
+      <ol>
+        <li>Presionar <em>Eliminar</em> en la noticia.</li>
+        <img src="./Images/imagen6.png" alt="" class="img">
+        <li>Confirmar en la ventana emergente. Si se confirma, la noticia se borra del DOM y de <code>localStorage</code>.</li>
+        <img src="./Images/imagen7.png" alt="" class="img">
+      </ol>
+    </section>
+  </div>
+  <footer>
+        <h3>
+            <p class="creditos">
+                Hecho por Oriana Vedia :D
+                Emili Zambrana
+                y Natalia Torricos
+                GRUPO 7   
+            </p>
+        </h3>
+    </footer>
+</body>
+</html>
