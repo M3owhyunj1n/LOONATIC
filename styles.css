@@ -175,6 +175,20 @@ section p, li{ color:#2b2b2b; line-height:1.5; font-size:15px;  }
   nav {
     padding: 10px;
   }
+  .menu {
+    flex-direction: column;
+    gap: 10px;              
+    text-align: center;
+  }
+  .menu li {
+    font-size: 16px;        
+    word-break: break-word; 
+  }
+  img {
+  max-width: 100%; 
+  height: auto;      
+  display: block;    
+}
   .img {
   width: 100%;
   max-width: 500px;    
